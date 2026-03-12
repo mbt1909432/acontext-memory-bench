@@ -282,9 +282,12 @@ export default function Home() {
         <section style={{textAlign: 'center', padding: '60px 0'}}>
           <h2>开始测试</h2>
           <p style={{marginBottom: '24px'}}>准备好运行 Acontext 记忆能力测试了吗？</p>
-          <div style={{display: 'flex', gap: '16px', justifyContent: 'center'}}>
+          <div style={{display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap'}}>
             <a href="https://github.com/mbt1909432/acontext-memory-bench" className="btn btn-primary">
               查看 GitHub 仓库
+            </a>
+            <a href="/Acontext_Memory_Benchmark.md" download className="btn btn-outline">
+              📥 导出 Markdown 文档
             </a>
             <a href="https://docs.acontext.io" className="btn btn-outline">
               Acontext 文档
