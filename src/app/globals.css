@@ -421,7 +421,7 @@ p {
 
 .arch-inner-boxes {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   margin-top: 12px;
 }
@@ -433,4 +433,10 @@ p {
   text-align: center;
   color: #a5b4fc;
   font-size: 13px;
+}
+
+.arch-step {
+  font-size: 11px;
+  color: #fbbf24;
+  margin-bottom: 4px;
 }

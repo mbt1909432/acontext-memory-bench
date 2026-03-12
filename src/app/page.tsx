@@ -167,16 +167,17 @@ export default function Home() {
             </div>
             <div className="arch-arrow">↓</div>
             <div className="arch-box">
-              <div className="arch-title">Acontext 记忆层</div>
-              <div className="arch-inner-boxes">
-                <div className="arch-inner-box">Session Storage</div>
-                <div className="arch-inner-box">Disk Storage</div>
-                <div className="arch-inner-box">Learning Space</div>
-              </div>
+              <div className="arch-title">Step 1: Session Storage</div>
+              <div className="arch-content">存储用户-助手历史对话（按时间戳组织）</div>
             </div>
             <div className="arch-arrow">↓</div>
             <div className="arch-box">
-              <div className="arch-title">LLM (GPT-4o)</div>
+              <div className="arch-title">Step 2: Learning Space</div>
+              <div className="arch-content">从对话中自动提取用户偏好、事实、技能</div>
+            </div>
+            <div className="arch-arrow">↓</div>
+            <div className="arch-box">
+              <div className="arch-title">Step 3: LLM (GPT-4o)</div>
               <div className="arch-content">基于记忆回答问题</div>
             </div>
             <div className="arch-arrow">↓</div>
