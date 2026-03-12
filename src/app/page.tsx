@@ -119,7 +119,7 @@ export default function Home() {
           <h3>对比实验设计</h3>
 
           <div className="card" style={{marginBottom: '16px'}}>
-            <p style={{margin: 0}}><strong>📌 说明：</strong>LongMemEval 论文已有 GPT-4o 基线结果（准确率 80%+），无需重新跑基线。我们的测试重点是验证 <strong>Acontext 的记忆方案</strong>效果。</p>
+            <p style={{margin: 0}}><strong>📌 说明：</strong>LongMemEval 论文已有 GPT-4o 基线结果（准确率 30%-70%），无需重新跑基线。我们的测试重点是验证 <strong>Acontext 的记忆方案</strong>效果。</p>
           </div>
 
           <div className="card">
@@ -136,7 +136,7 @@ export default function Home() {
                   <tr>
                     <td><span className="tag tag-gray">基线</span></td>
                     <td>直接将全部历史对话喂给 LLM</td>
-                    <td>✅ 论文已有（GPT-4o ~80%+）</td>
+                    <td>✅ 论文已有（GPT-4o 30%-70%）</td>
                   </tr>
                   <tr>
                     <td><span className="tag tag-blue">Acontext 测试</span></td>
