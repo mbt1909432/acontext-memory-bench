@@ -117,42 +117,51 @@ export default function Home() {
           </div>
 
           <h3>对比实验设计</h3>
+
+          <div className="card" style={{marginBottom: '16px'}}>
+            <p style={{margin: 0}}><strong>📌 说明：</strong>LongMemEval 论文已有 GPT-4o 基线结果（准确率 80%+），无需重新跑基线。我们的测试重点是验证 <strong>Acontext 的记忆方案</strong>效果。</p>
+          </div>
+
           <div className="card">
             <div className="table-wrapper">
               <table>
                 <thead>
                   <tr>
-                    <th>实验组</th>
-                    <th>记忆方案</th>
-                    <th>目的</th>
+                    <th>方案</th>
+                    <th>做法</th>
+                    <th>结果来源</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span className="tag tag-gray">基线组</span></td>
-                    <td>直接将全部历史传给 LLM</td>
-                    <td>建立性能上限参考</td>
+                    <td><span className="tag tag-gray">基线</span></td>
+                    <td>直接将全部历史对话喂给 LLM</td>
+                    <td>✅ 论文已有（GPT-4o ~80%+）</td>
                   </tr>
                   <tr>
-                    <td><span className="tag tag-blue">实验组</span></td>
-                    <td>使用 Acontext Session Storage</td>
-                    <td>测试基础存储能力</td>
-                  </tr>
-                  <tr>
-                    <td><span className="tag tag-green">实验组+</span></td>
-                    <td>使用 Acontext Learning Space</td>
-                    <td>测试记忆提取与技能生成</td>
+                    <td><span className="tag tag-blue">Acontext 测试</span></td>
+                    <td>Session Storage 存对话 → Learning Space 提取记忆 → 检索回答</td>
+                    <td>🧪 我们要测的</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
 
+          <h3>核心验证点</h3>
+          <div className="card">
+            <ol>
+              <li><strong>记忆提取能力</strong>：Learning Space 能否从对话中自动提取有效记忆（用户偏好、事实）</li>
+              <li><strong>检索效果</strong>：Acontext 检索到的相关记忆 vs 全量历史，准确率差距多少</li>
+              <li><strong>Token 效率</strong>：Acontext 方案需要多少 token vs 全量历史（成本对比）</li>
+            </ol>
+          </div>
+
           <h3>评估指标</h3>
           <ul>
-            <li><strong>准确率 (Accuracy)</strong>：正确回答的问题比例</li>
-            <li><strong>分维度得分</strong>：5 种能力各自的准确率</li>
-            <li><strong>Token 消耗</strong>：不同方案的 API 成本对比</li>
+            <li><strong>准确率 (Accuracy)</strong>：与论文基线对比</li>
+            <li><strong>Token 消耗</strong>：Acontext 方案 vs 全量历史的成本对比</li>
+            <li><strong>记忆召回率</strong>：检索到的相关会话占比</li>
           </ul>
         </section>
 
